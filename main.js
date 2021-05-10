@@ -34,10 +34,8 @@ function onGalleryImageClick(evt) {
     if (!isImage) {
         return;
     }
-
-    const imageEl = evt.target;
-    const imageSource = imageEl.dataset.source;
-    const imageModal = document.querySelector('.lightbox__image');
+    
+    const imageSource = evt.target.dataset.source;
 
     imageModal.src = imageSource;
     lightboxRef.classList.add('is-open');   
